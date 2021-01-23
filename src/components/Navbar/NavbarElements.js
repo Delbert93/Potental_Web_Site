@@ -7,7 +7,7 @@ export const Nav = styled.nav`
     height: 85px;
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem calc((100vw - 1000px) / 2); 
+    //padding: 0.2rem calc((100vw - 1000px) / 2); 
     z-index: 12;
 `;
 
@@ -36,12 +36,6 @@ export const Bars = styled(FaBars)`
         font-size: 1.8rem;
         cursor: pointer;
     }
-    /* &.scroll-behavior{
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: lightblue;
-    } */
 `;
 
 export const NavMenu = styled.div`
@@ -57,6 +51,7 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
     margin-right: 24px;
+    position: relative;
     @media screen and (max-width: 768px) {
         display: none;
     }

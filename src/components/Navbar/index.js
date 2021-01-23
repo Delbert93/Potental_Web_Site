@@ -11,9 +11,10 @@ import './navbar.scss';
 
 const Navbar = () => {
     const [scrolled,setScrolled]=React.useState(false);
+    
     const handleScroll = () => {
         const offset = window.scrollY;
-        if(offset > 200){
+        if(offset > 2){
             setScrolled(true);
         }
         else{
@@ -30,7 +31,7 @@ const Navbar = () => {
         }
     return (
         <>
-            <Nav>
+            <Nav className = {navbarClasses.join(" ")}>
                 <Bars />
                 <NavMenu>
                     <NavLink to='/about' activeStyle>
@@ -52,7 +53,7 @@ const Navbar = () => {
                         Sign Up
                     </NavLink>
                 </NavMenu>
-                <NavBtn>
+                <NavBtn className = "button">
                     <NavBtnLink to='/sign-in'>
                         Sign In
                     </NavBtnLink>
