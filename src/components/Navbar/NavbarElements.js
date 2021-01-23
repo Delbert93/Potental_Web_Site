@@ -36,6 +36,12 @@ export const Bars = styled(FaBars)`
         font-size: 1.8rem;
         cursor: pointer;
     }
+    /* &.scroll-behavior{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: lightblue;
+    } */
 `;
 
 export const NavMenu = styled.div`

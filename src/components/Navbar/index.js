@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import{
     Nav,
     NavLink,
@@ -7,8 +7,27 @@ import{
     NavBtn,
     NavBtnLink
 } from './NavbarElements';
+import './navbar.scss';
 
 const Navbar = () => {
+    const [scrolled,setScrolled]=React.useState(false);
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if(offset > 200){
+            setScrolled(true);
+        }
+        else{
+            setScrolled(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    })
+    let navbarClasses = ['navbar'];
+        if(scrolled){
+            navbarClasses.push('scrolled');
+        }
     return (
         <>
             <Nav>
